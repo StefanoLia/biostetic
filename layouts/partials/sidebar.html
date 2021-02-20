@@ -1,0 +1,12 @@
+<div class="sidebar">
+    <div class="social-media">
+        {{- range .Site.Data.socialmedia.accounts -}}
+          {{- if isset . "class" -}}
+            <a href="{{ .url }}" class="{{ .class }}" target="_blank"></a>
+          {{- else -}}
+            <a href="{{ .url }}" ><img alt="{{ .alt }}" target="_blank" class="img-fluid" src="{{ .img }}"></a>
+          {{- end -}}
+        {{- end -}}
+
+    </div>
+</div>

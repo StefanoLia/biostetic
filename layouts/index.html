@@ -1,0 +1,32 @@
+{{- define "main" -}}
+<div class="introduction">
+
+    <div class="introduction-section">
+        <div class="introduction-text">
+            <p class="introduction-text-im">Hi! I'm Stefano.</p>
+            {{.Content}}
+        </div>
+    </div>
+
+    {{- range .Site.Data.homepage.im -}}
+    <div id="{{ .id }}" class="introduction-section">
+        <div class="introduction-text">
+            <p class="introduction-text-im">I'm a <span class="definition">{{ .definition }}</span></p>
+            <p> {{ .description }} </p>
+            <ul class="qualifications">
+                {{- range .qualifications -}}
+                    {{- if isset . "link" -}}
+                        <li><a href="{{ .link }}" target="_blank" style="color: {{ .color }};"><span>#</span>{{ .qualification }}</a></li>
+                    {{- else -}}
+                        <li style="color: {{ .color }};"> {{ .qualification }}</li>
+                    {{- end -}}
+                {{- end -}}
+            </ul>
+        </div>
+    </div>
+    {{- end -}}
+
+    <p class="info-arrow">click the buttons to see my skills</p>
+    <p><i class="arrow down"></i></p>
+
+{{- end -}}

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"{{with .Site.LanguageCode}} xml:lang="{{.}}" lang="{{.}}"{{end}}>
+  {{- partial "head.html" . -}}
+  {{- if .Page.IsHome -}}
+  <body class="background">
+  {{- else -}}
+  <body class="background-empty">
+  {{- end -}}
+    {{- partial "navigation.html" . -}}
+      <div class="content" >
+          {{- partial "sidebar.html" . -}}
+          <section>
+              {{- block "main" .}}{{- end }}
+          </section>
+      </div>  
+      {{- partial "tail.html" . -}}
+  </body>
+</html>
+
+<!--style="background-image:url('{{"developer-back2.png" | relURL }}')"-->

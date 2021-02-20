@@ -1,0 +1,23 @@
+{{ define "main" }}
+
+<h1>{{.Title}}</h1>
+
+{{ if ( eq ( len .Pages ) 0 ) }}
+
+<div class="high-text-container">
+<p class="high-text">Nothing to see here – yet</p>
+
+<span class="emoj">;-;</span>
+
+<p class="grey">Some content will be available soon</p>
+</div>
+
+{{ end }}
+
+  {{ range .Paginator.Pages}}
+    {{ partial "post_summary.html" . }}
+  {{ end }}
+
+  {{ template "_internal/pagination.html" . }}
+
+{{ end }}

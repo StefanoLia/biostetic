@@ -1,0 +1,23 @@
+<article>
+    <div class="post-summary">
+        <header>
+            <h3>
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            </h3>
+            {{ .Summary }}
+            <div class="post-details">
+                <p>{{ .Params.Author }}</p> &middot;
+                <p>{{ .Date | dateFormat "Jan 2, 2006" }}</p> &middot;
+                <p>{{ math.Round (div (countwords .Content) 200) }} min read</p>
+            </div>
+        </header>
+        <figure class="article-image-summary">
+            <div>
+                {{ $myarray := split .Params.Imageinfo "|"}}
+                <img src="{{ .Params.Image }}" alt="{{ index $myarray 0 }}"/>
+                <span class="photo-description"> Photo by <a href="{{ index $myarray 1 }}">{{ index $myarray 3 }}</a> on <a href="{{ index $myarray 2}}">Unsplash</a></span>
+            </div>
+        </figure>
+    </div>
+    
+</article>

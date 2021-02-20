@@ -1,0 +1,62 @@
+<head>
+  {{ hugo.Generator }}
+
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="author" content="{{ .Site.Params.author }}" />
+  <meta name="description" content="
+  {{- with .Page.Description -}}
+    {{ . }}
+  {{- else -}}
+    {{ .Site.Params.description }}
+  {{- end -}}"/>
+  <meta name="keywords" content="
+  {{- with .Page.Keywords -}}
+    {{ . }}
+  {{- else -}}
+    {{ .Site.Params.Keywords }}
+  {{- end -}}"/>
+  <meta name="google-site-verification" content="KWKs9b4k3NBu7IfKYTYEOzIc4e4a0Eo_Sljpze4i5UM" />
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <!--<script src="//cdnjs.cloudflare.com/ajax/libs/velocity/2.0.6/velocity.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/velocity/2.0.6/velocity.ui.min.js"></script>-->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/velocity/1.5.2/velocity.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/velocity/1.5.2/velocity.ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+  {{ template "_internal/google_analytics_async.html" . }}
+
+  <title>
+    {{- if .Page.IsHome -}}
+      {{ .Site.Title }}
+    {{- else -}}
+      {{ .Title }} - {{ .Site.Title }}
+    {{- end -}}
+  </title>
+
+  {{ $css := resources.Get "css/styles.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink | relURL }}">
+  <!-- social media buttons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  {{- range .Site.Params.customCss -}}
+    <link rel="stylesheet" href="{{ . | absURL }}">
+  {{- end -}}
+  <!-- iterates over all of the alternative formats associated with the current page -->
+  {{ range .AlternativeOutputFormats -}}
+    {{- $link := `<link rel="%s" type="%s" href="%s" title="%s">` -}}
+    {{- $title := printf "%s - %s" $.Page.Title $.Site.Title -}}
+
+    {{- if $.Page.IsHome -}}
+      {{- $title = $.Site.Title -}}
+    {{- end -}}
+
+    {{- printf $link .Rel .MediaType.Type .Permalink $title | safeHTML -}}
+  {{- end -}}
+
+</head>

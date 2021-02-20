@@ -1,0 +1,39 @@
+{{ define "main" }}
+
+<h1>{{.Title}}</h1>
+
+{{ .Content }}
+
+<div class="books-list">
+    <!--<div class="books-tabs-container">
+
+        <div class="books-tab">
+            <button class="button-book-active" onclick="openBookSection(event, 'all')">All</button>
+            <button onclick="openBookSection(event, 'selfdevelopment')">Self Development</button>
+            <button onclick="openBookSection(event, 'science')" id="last-button">Science</button>
+        </div>
+    </div>-->
+
+    <div class="book-category" id="self-improvement">
+        <h3 class="book-category-title">Self improvement</h3>
+        <div class="book-category-section">
+        {{ range .Site.Data.booksection.selfimprovement }}
+
+        {{ partial "book.html" . }}
+
+        {{ end }}
+        </div>
+    </div>
+
+    <div class="book-category" id="science">
+        <h3 class="book-category-title">Science</h3>
+        <div class="book-category-section">
+            {{ range .Site.Data.booksection.science }}
+            
+            {{ partial "book.html" . }}
+            
+            {{ end }}
+        </div>
+    </div>
+</div>
+{{ end }}

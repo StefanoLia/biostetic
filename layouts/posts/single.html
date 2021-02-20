@@ -1,0 +1,34 @@
+{{ define "main" }}
+
+<article class="post">
+    <div class="article-intro-section">
+        <figure class="article-image">
+            {{ $myarray := split .Params.Imageinfo "|"}}
+            <span class="photo-description"> Photo by <a href="{{ index $myarray 1 }}">{{ index $myarray 3 }}</a> on <a href="{{ index $myarray 2}}">Unsplash</a></span>
+            <img src="{{ .Params.Image }}" alt="index $myarray "/>
+        </figure>
+        <header class="article-header">
+            <h2>{{ .Title }}</h2>
+            <!--<p>
+                By {{ .Params.Author }}
+            </p>-->
+            <div class="post-details">
+                <p>{{ .Params.Author }}</p> &middot;
+                <p>{{ .Date | dateFormat "Jan 2, 2006" }}</p> &middot;
+                <p>{{ math.Round (div (countwords .Content) 200) }} min read</p>
+            </div>
+            <div class="tags">
+                {{ range.Params.tags }}
+                    <a class="tag" href="/tags/{{ . | urlize }}">{{ . }}</a>
+                {{ end }}
+            </div>
+        </header>
+    </div>
+
+    <section class="body">
+        {{ .Content }}
+    </section>
+
+</article>
+
+{{ end }}

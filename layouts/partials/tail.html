@@ -1,0 +1,15 @@
+<footer>
+    {{ if isset .Params "javascript"}}
+    {{ range .Params.javascript }}
+      {{ $js := resources.Get . }}
+      <script src="{{ $js.RelPermalink | relURL }}"></script>
+    {{ end }}
+  {{ end }}
+    <p>
+    <small> Copyright {{now.Format "2006"}} - {{.Site.Params.author}}
+    <!--<p> Powered by <br> 
+        <a href="https://gohugo.io">
+            <img src="{{ "images/hugo-logo-wide.png" | relURL}}" width="128" height="38">
+        </a>  
+    </p>--></small></p>
+</footer>

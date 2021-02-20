@@ -1,0 +1,21 @@
+{{ define "main" }}
+
+<h1>{{ .Title }}</h1>
+
+{{ .Content }}
+
+
+{{ $currentPage := . }}
+
+{{- range $key, $taxonomy := .Site.Taxonomies.tags -}}
+    {{- if eq $key $currentPage.Title -}}
+        {{- range $taxonomy.Pages -}}
+            <!--<li hugo-nav="{{ .RelPermalink}}"><a href="{{ .Permalink}}"> {{ .LinkTitle }} </a> </li>-->
+            {{- partial "post_summary.html" . -}}
+
+        {{- end -}}
+    {{- end -}} 
+{{- end -}}
+
+
+{{- end -}}

@@ -1,0 +1,39 @@
+{{ define "main"}}
+
+<div class="project-container">
+    <h2> {{ .Title }}</h2>
+    <!--<section class="project-list">
+        <h3>Similar Projects</h3>
+        <ul>
+            {{ range (where .Site.RegularPages "Type" "in" "projects").ByDate.Reverse }}
+                <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+            {{ end }}
+        </ul>
+    </section>-->
+    <section class="project-header">
+        <figure class="project-image">
+            <div>
+                {{ $myarray := split .Params.Imageinfo "|"}}
+                <img src="{{ .Params.Image }}" alt="{{ index $myarray 0 }}"/>
+            </div>
+        </figure>
+        <ul class="project-info">
+            <li><b>Publish date</b>: {{ .Date | dateFormat "Jan 2, 2006" }}</li>
+            <li><b>Version</b>: {{ .Params.Version }}</li>
+            <li><b>Github</b>: <a href="{{ .Params.Github}}" target="_blank">{{ .Params.Github}}</a></li>
+            <li><b>Technologies</b>:
+            {{ $lasttech := index (last 1 .Params.tech_used) 0 }}
+            {{ range .Params.tech_used }}
+                {{ if eq $lasttech . }}
+                    {{ . }}
+                {{ else }}
+                    {{ . }},
+                {{ end }}
+            {{ end }}
+            </li>
+        </ul>
+    </section>
+    {{ .Content }}
+</div>
+
+{{ end }}
