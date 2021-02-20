@@ -1,0 +1,52 @@
+baseURL = "https://imstefanolia.netlify.app/"
+languageCode = "en-us"
+title = "Stefano Lia"
+googleAnalytics = "G-N1EX1K6GVY"
+theme = "liaste"
+Paginate = 4
+
+[taxonomies]
+  tag = "tags"
+  month = "month"
+  year = "year"
+
+[permalinks]
+  posts = "posts/:year/:month/:slug/"
+  year = "/posts/:slug/"
+  month = "/posts/:slug/"
+  tags = "/tags/:slug"
+
+[params]
+  author = "Stefano Lia"
+  description = "My personal website"
+  keywords = "stefanolia, stefano, lia, sito, website, imstefanolia, sito web"
+
+[menu]
+
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    title = "About me"
+    url = "/about"
+    weight = 1
+
+    [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    title = "Posts"
+    url = "/posts"
+    weight = 2
+
+    [[menu.main]]
+    identifier = "Projects"
+    name = "Projects"
+    title = "Projects"
+    url = "/projects"
+    weight = 3
+
+    [[menu.main]]
+    identifier = "books"
+    name = "Books"
+    title = "Books"
+    url = "/books"
+    weight = 4
