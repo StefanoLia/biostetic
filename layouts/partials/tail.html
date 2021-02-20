@@ -2,7 +2,7 @@
     {{ if isset .Params "javascript"}}
     {{ range .Params.javascript }}
       {{ $js := resources.Get . }}
-      <script src="{{ $js.RelPermalink | relURL }}"></script>
+      <script src="{{ $js.Permalink | absURL }}"></script>
     {{ end }}
   {{ end }}
     <p>

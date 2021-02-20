@@ -3,7 +3,7 @@ title: "Books"
 date: 2020-11-29T12:47:39+01:00
 draft: false
 description: "List of books"
-keywords: "stefanolia, stefano, lia, sito, website, books"
+keywords: "sito, website, books"
 javascript: ["js/books.js", "js/effects-books.js"]
 ---
 
