@@ -1,0 +1,54 @@
+{
+    "im": [
+      {
+        "definition": "Developer",
+        "id": "developer",
+        "description": "Solid background in Computer Science. I like deveolping for web and learning programming languages.",
+        "qualifications": [
+          {
+            "qualification": "Bachelor's degree in Computer Science",
+            "color": "#000000"
+          },
+          {
+            "qualification": "Master's degree in Computer Science",
+            "link": "https://bestr.it/award/show/ecf3fda25d40c5b377e785dd985c0b1225d20d9f",
+            "color": "#000000"
+          }
+        ]
+      },
+      {
+        "definition": "Performance Consultant",
+        "id": "performance-consultant",
+        "description": "As a consultant, I help companies in improving processes, products, services, and software.",
+        "qualifications": [
+          {
+            "qualification": "Splunk Core Certified User",
+            "link": "https://www.youracclaim.com/badges/eab84f38-4476-4135-be18-8c4fb366558f/linked_in_profile",
+            "color": "#030202"
+          },
+          {
+            "qualification": "Splunk Core Certified Power User",
+            "link": "https://www.youracclaim.com/badges/c4a4fe53-863f-42c8-9065-3e1602a5a495?source=linked_in_profile",
+            "color": "#030202"
+          },
+          {
+            "qualification": "Dynatrace Associate",
+            "link": "https://www.youracclaim.com/badges/41cf64ec-9569-45c7-8083-2f57bf88226b?source=linked_in_profile",
+            "color": "#030202"
+          }
+        ]
+      },
+      {
+        "definition": "Machine Learning Engineer",
+        "id": "machine-learning-engineer",
+        "description": "Passionate about AI and Data Science. Particularly interested in Computer Vision and NLP.",
+        "qualifications": [
+          {
+            "qualification": "International mobility at the department of Data Science at Univeristy of Helsinki.",
+            "link": "https://bestr.it/award/show/gf5-V4rmR8emjVGD1IqugA",
+            "color": "#030202"
+          }
+        ]
+      }
+    ]
+  }

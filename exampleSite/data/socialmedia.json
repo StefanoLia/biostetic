@@ -1,0 +1,26 @@
+{
+    "accounts":
+    [
+        {
+            "name": "LinkedIn",
+            "class": "fa fa-linkedin",
+            "url": "https://www.linkedin.com/in/stefano-lia/"
+        },
+        {
+            "name": "GitHub",
+            "class": "fa fa-github",
+            "url": "https://github.com/StefanoLia"
+        },
+        {
+            "name": "Instagram",
+            "class": "fa fa-instagram",
+            "url": "https://www.instagram.com/stefanolia/"
+        },
+        {
+            "name": "goodreads",
+            "url": "https://www.goodreads.com/user/show/115380525-stefano-lia", 
+            "img": "/icons/iconfinder_goodreads_4691419.png",
+            "alt": "goodreads-icon"
+        }
+    ]
+}
