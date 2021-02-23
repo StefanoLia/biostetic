@@ -27,26 +27,26 @@ Paginate = 4
     identifier = "about"
     name = "About"
     title = "About me"
-    url = "/about"
+    urlpage = "/about"
     weight = 1
 
     [[menu.main]]
     identifier = "posts"
     name = "Posts"
     title = "Posts"
-    url = "/posts"
+    urlpage = "/posts"
     weight = 2
 
     [[menu.main]]
     identifier = "Projects"
     name = "Projects"
     title = "Projects"
-    url = "/projects"
+    urlpage = "/projects"
     weight = 3
 
     [[menu.main]]
     identifier = "books"
     name = "Books"
     title = "Books"
-    url = "/books"
+    urlpage = "/books"
     weight = 4
