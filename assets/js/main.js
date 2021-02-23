@@ -35,9 +35,10 @@ newContainer.setAttribute("class", "btn-group");
 
 cellText = ["Developer", "Performance Consultant", "Machine Learning Engineer"];
 var allSection = document.getElementsByClassName("introduction");
-var firstSection = allSection[0];
 
 var allIntroSection = document.getElementsByClassName("introduction-section");
+
+var firstSection = allSection[0];
 
 for( var i=1; i<allIntroSection.length; i++) {
     allIntroSection[i].style.display = "none";
@@ -61,5 +62,17 @@ for( var i=0; i<allIntroSection.length-1; i++) {
 
     newContainer.appendChild(newButton);
 }
+
+var newParagraph1 = document.createElement("p");
+newParagraph1.innerHTML="click the buttons to see my skills";
+newParagraph1.setAttribute("class", "info-arrow");
+
+var newParagraph2 = document.createElement("p");
+var arrow = document.createElement("i");
+arrow.setAttribute("class", "arrow down");
+newParagraph2.appendChild(arrow);
+
+firstSection.appendChild(newParagraph1);
+firstSection.appendChild(newParagraph2);
 
 firstSection.appendChild(newContainer);

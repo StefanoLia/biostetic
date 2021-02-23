@@ -10,6 +10,12 @@
   {{- else -}}
     {{ .Site.Params.description }}
   {{- end -}}"/>
+  <meta name="og:description" content="
+  {{- with .Page.Description -}}
+    {{ . }}
+  {{- else -}}
+    {{ .Site.Params.description }}
+  {{- end -}}"/>
   <meta name="keywords" content="
   {{- with .Page.Keywords -}}
     {{ . }}
@@ -17,9 +23,20 @@
     {{ .Site.Params.Keywords }}
   {{- end -}}"/>
   <meta name="google-site-verification" content="KWKs9b4k3NBu7IfKYTYEOzIc4e4a0Eo_Sljpze4i5UM" />
+
+  <meta property='og:title' content='{{ .Title }} - {{ .Site.Title }}'/>
+  
+  <meta property='og:url' content='{{ .Permalink }}'/>
+
+  {{- if isset .Params "linkimg" -}}
+  <meta property="og:image" content="{{ .Params.linkimg | absURL }}" />
+  {{- else -}}
+  <meta property="og:image" content="{{ .Site.Params.linkimg | absURL }}" />
+  {{- end -}}
+  
+
   
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
