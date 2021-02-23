@@ -3,11 +3,11 @@
 {{- range .Site.Menus.main -}}
     <li class="nav-item" role="presentation">
         {{- if eq $currentPage.Title .Title -}}
-            <a href="{{ .Urlpage }}" class="nav-link active">
+            <a href="{{ .URL | absURL }}" class="nav-link active">
                 <span>{{ .Title }}</span>
             </a>
         {{- else -}}
-            <a href="{{ .Urlpage}}" class="nav-link">
+            <a href="{{ .URL | absURL }}" class="nav-link">
                 <span>{{ .Title }}</span>
             </a>
         {{- end -}}

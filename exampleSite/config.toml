@@ -1,4 +1,4 @@
-baseURL = "https://imstefanolia.netlify.app/"
+baseURL = "https://imstefanolia.com/"
 languageCode = "en-us"
 title = "Stefano Lia"
 googleAnalytics = "G-N1EX1K6GVY"
@@ -20,6 +20,7 @@ Paginate = 4
   author = "Stefano Lia"
   description = "My personal website"
   keywords = "stefanolia, stefano, lia, sito, website, imstefanolia, sito web"
+  linkimg = "/generating-link-preview.png"
 
 [menu]
 
@@ -27,26 +28,26 @@ Paginate = 4
     identifier = "about"
     name = "About"
     title = "About me"
-    urlpage = "/about"
+    url = "/about"
     weight = 1
 
-    [[menu.main]]
+  [[menu.main]]
     identifier = "posts"
     name = "Posts"
     title = "Posts"
-    urlpage = "/posts"
+    url = "/posts"
     weight = 2
 
-    [[menu.main]]
+  [[menu.main]]
     identifier = "Projects"
     name = "Projects"
     title = "Projects"
-    urlpage = "/projects"
+    url = "/projects"
     weight = 3
 
-    [[menu.main]]
+  [[menu.main]]
     identifier = "books"
     name = "Books"
     title = "Books"
-    urlpage = "/books"
+    url = "/books"
     weight = 4
