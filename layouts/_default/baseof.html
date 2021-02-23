@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"{{with .Site.LanguageCode}} xml:lang="{{.}}" lang="{{.}}"{{end}}>
   {{- partial "head.html" . -}}
   {{- if .Page.IsHome -}}
-  <body class="background" style="background: url('{{ "bg.png" | absURL }}') no-repeat center center fixed; ">
+  <body class="background">
   {{- else -}}
   <body class="background-empty">
   {{- end -}}
