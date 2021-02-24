@@ -27,7 +27,7 @@ Paginate = 4
   [[menu.main]]
     identifier = "about"
     name = "About"
-    title = "About me"
+    title = "About"
     url = "/theme/biostetic/about"
     weight = 1
 

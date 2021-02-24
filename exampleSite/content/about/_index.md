@@ -1,5 +1,5 @@
 ---
-title: "About me"
+title: "About"
 date: 2020-11-29T12:32:34+01:00
 draft: false
 description: "Details about me"
