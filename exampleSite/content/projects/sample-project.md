@@ -2,7 +2,7 @@
 title: "A sample project"
 date: 2020-12-12T07:56:37+01:00
 draft: false
-keywords: "website, projects, vincent"
+keywords: "website, projects, sample project"
 summary: "Summary of the sample project"
 tech_used: 
 - Python 3.7

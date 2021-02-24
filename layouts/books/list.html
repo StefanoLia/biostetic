@@ -14,21 +14,10 @@
         </div>
     </div>-->
 
-    <div class="book-category" id="self-improvement">
-        <h3 class="book-category-title">Self improvement</h3>
-        <div class="book-category-section">
-        {{ range .Site.Data.booksection.selfimprovement }}
-
-        {{ partial "book.html" . }}
-
-        {{ end }}
-        </div>
-    </div>
-
-    <div class="book-category" id="science">
+    <div class="book-category" id="example">
         <h3 class="book-category-title">Science</h3>
         <div class="book-category-section">
-            {{ range .Site.Data.booksection.science }}
+            {{ range .Site.Data.booksection.example }}
             
             {{ partial "book.html" . }}
             

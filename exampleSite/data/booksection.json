@@ -2,11 +2,7 @@
   "example": [
   {
     "title": "example",
-    "author": "author",
-    "link": "insert link",
-    "img": "insert link",
-    "imgheight": "15em",
-    "alt": "cover of Finding Sisu by Katja Panzar"
+    "author": "author"
   }
   ]
 }
