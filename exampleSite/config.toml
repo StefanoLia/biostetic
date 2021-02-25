@@ -28,26 +28,26 @@ Paginate = 4
     identifier = "about"
     name = "About"
     title = "About"
-    url = "/theme/biostetic/about"
+    url = "/about/"
     weight = 1
 
   [[menu.main]]
     identifier = "posts"
     name = "Posts"
     title = "Posts"
-    url = "/theme/biostetic/posts"
+    url = "/posts/"
     weight = 2
 
   [[menu.main]]
     identifier = "Projects"
     name = "Projects"
     title = "Projects"
-    url = "/theme/biostetic/projects"
+    url = "/projects/"
     weight = 3
 
   [[menu.main]]
     identifier = "books"
     name = "Books"
     title = "Books"
-    url = "/theme/biostetic/books"
+    url = "/books/"
     weight = 4
