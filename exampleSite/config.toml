@@ -1,4 +1,4 @@
-baseURL = "http://localhost:1313/theme/biostetic/"
+baseURL = " https://example.com"
 languageCode = "en-us"
 title = "Stefano Lia"
 googleAnalytics = "G-N1EX1K6GVY"
@@ -35,19 +35,19 @@ Paginate = 4
     identifier = "posts"
     name = "Posts"
     title = "Posts"
-    url = "/posts/"
+    url = "https://www.imstefanolia.com"
     weight = 2
 
   [[menu.main]]
     identifier = "Projects"
     name = "Projects"
     title = "Projects"
-    url = "/projects/"
+    url = "https://www.imstefanolia.com"
     weight = 3
 
   [[menu.main]]
     identifier = "books"
     name = "Books"
     title = "Books"
-    url = "/books/"
+    url = "https://www.imstefanolia.com"
     weight = 4

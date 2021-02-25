@@ -1,7 +1,7 @@
 <footer>
     {{ if isset .Params "javascript"}}
     {{ range .Params.javascript }}
-      {{ $js := resources.Get . }}
+      {{ $js := resources.Get . | minify | fingerprint}}
       <script src="{{ $js.Permalink }}"></script>
     {{ end }}
   {{ end }}
