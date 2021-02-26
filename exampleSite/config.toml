@@ -1,4 +1,4 @@
-baseURL = " https://example.com"
+baseURL = " https://www.imstefanolia.con"
 languageCode = "en-us"
 title = "Stefano Lia"
 googleAnalytics = "G-N1EX1K6GVY"
@@ -27,27 +27,27 @@ Paginate = 4
   [[menu.main]]
     identifier = "about"
     name = "About"
-    title = "About"
-    url = "/about/"
+    title = "About me"
+    url = "/about"
     weight = 1
 
-  [[menu.main]]
+    [[menu.main]]
     identifier = "posts"
     name = "Posts"
     title = "Posts"
-    url = "https://www.imstefanolia.com"
+    url = "/posts"
     weight = 2
 
-  [[menu.main]]
+    [[menu.main]]
     identifier = "Projects"
     name = "Projects"
     title = "Projects"
-    url = "https://www.imstefanolia.com"
+    url = "/projects"
     weight = 3
 
-  [[menu.main]]
+    [[menu.main]]
     identifier = "books"
     name = "Books"
     title = "Books"
-    url = "https://www.imstefanolia.com"
+    url = "/books"
     weight = 4

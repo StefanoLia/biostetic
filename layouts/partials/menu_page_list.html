@@ -3,11 +3,13 @@
 {{- range .Site.Menus.main -}}
     <li class="nav-item" role="presentation">
         {{- if eq $currentPage.Title .Title -}}
-            <a href="www.imstefanolia.com" class="nav-link active">
+            <!-- substitute the link with (.URL) -->
+            <a href="https://www.imstefanolia.com" class="nav-link active">
                 <span>{{ .Title }}</span>
             </a>
         {{- else -}}
-            <a href="www.imstefanolia.com" class="nav-link">
+            <!-- substitute the link with (.URL) -->
+            <a href="https://www.imstefanolia.com" class="nav-link">
                 <span>{{ .Title }}</span>
             </a>
         {{- end -}}
