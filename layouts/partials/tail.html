@@ -1,10 +1,6 @@
 <footer>
-    {{ if isset .Params "javascript"}}
-    {{ range .Params.javascript }}
-      {{ $js := resources.Get . | minify | fingerprint}}
-      <script src="{{ $js.Permalink }}"></script>
-    {{ end }}
-  {{ end }}
+      <script src="js/main.js"></script>
+      <script src="js/style.js"></script>
     <p>
     <small> Copyright {{now.Format "2006"}} - {{.Site.Params.author}}</small></p>
 </footer>

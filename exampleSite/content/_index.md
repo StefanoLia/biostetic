@@ -6,5 +6,3 @@ description: "Homepage"
 keywords: "stefanolia, stefano, lia, sito, website, imstefanolia, sito web"
 javascript: ["js/main.js", "js/style.js"]
 ---
-
-Enterprising Computer Scientist with a passion for AI and software development.
