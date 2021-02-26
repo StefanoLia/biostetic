@@ -8,7 +8,7 @@ description = "A theme for describing yourself, your passions and skills"
 homepage = "https://www.imstefanolia.com/"
 tags = ['biography', 'aestetic', 'impact', 'dark', 'hugo-template', 'bootstrap', 'simple', 'minimal', 'creative', 'portfolio']
 features = ['responsive']
-min_version = "0.41.0"
+min_version = "0.78.1"
 
 [author]
   name = "Stefano Lia"
