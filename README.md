@@ -4,7 +4,7 @@ It's a personalized and customizable template developed using Hugo for describin
 
 ### Demo
 
-[Preview](www.imstefanolia.com)
+[Preview](https://www.imstefanolia.com)
 
 **Please do not use the images in the Preview. They are only for demonstration purpose**
 
